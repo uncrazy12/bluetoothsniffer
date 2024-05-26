@@ -1,0 +1,1890 @@
+options:
+  parameters:
+    author: edwin
+    catch_exceptions: 'True'
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: bluetoothSniffer
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: Not titled yet
+    window_size: (1000,1000)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: bandpass_filter
+  id: variable_band_pass_filter_taps
+  parameters:
+    beta: '6.76'
+    comment: ''
+    gain: '1.0'
+    high_cutoff_freq: 500e3
+    low_cutoff_freq: -500e3
+    samp_rate: samp_rate
+    type: complex_band_pass
+    width: 50e3
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1840, -4.0]
+    rotation: 0
+    state: true
+- name: bandwidth
+  id: variable
+  parameters:
+    comment: ''
+    value: 6e6
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [392, 16.0]
+    rotation: 0
+    state: enabled
+- name: bandwith_channel
+  id: variable
+  parameters:
+    comment: ''
+    value: 1e6
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [760, 20.0]
+    rotation: 0
+    state: enabled
+- name: center_freq
+  id: variable_qtgui_entry
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: center_freq
+    type: int
+    value: '2440'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [888, 32.0]
+    rotation: 0
+    state: true
+- name: fft_length
+  id: variable
+  parameters:
+    comment: ''
+    value: '2048'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [528, 16.0]
+    rotation: 0
+    state: enabled
+- name: gain
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: gain
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: int
+    start: '0'
+    step: '1'
+    stop: '49'
+    value: '20'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1032, 16.0]
+    rotation: 0
+    state: true
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: 5e6
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [184, 16.0]
+    rotation: 0
+    state: enabled
+- name: trigger
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: trigger
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '-100'
+    step: '1'
+    stop: '0'
+    value: '-15'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1200, 32.0]
+    rotation: 0
+    state: true
+- name: vec_length
+  id: variable
+  parameters:
+    comment: ''
+    value: '2048'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [656, 16.0]
+    rotation: 0
+    state: enabled
+- name: analog_const_source_x_0
+  id: analog_const_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [936, 1580.0]
+    rotation: 0
+    state: true
+- name: analog_const_source_x_0_0
+  id: analog_const_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [928, 1292.0]
+    rotation: 0
+    state: true
+- name: analog_const_source_x_0_1
+  id: analog_const_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [920, 1004.0]
+    rotation: 0
+    state: true
+- name: analog_const_source_x_0_2
+  id: analog_const_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [936, 1868.0]
+    rotation: 0
+    state: true
+- name: analog_const_source_x_0_3
+  id: analog_const_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [928, 2196.0]
+    rotation: 0
+    state: true
+- name: analog_pwr_squelch_xx_0_0
+  id: analog_pwr_squelch_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: 100e-6
+    comment: ''
+    gate: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    ramp: '0'
+    threshold: trigger
+    type: complex
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [800, 356.0]
+    rotation: 0
+    state: enabled
+- name: analog_pwr_squelch_xx_0_0_0
+  id: analog_pwr_squelch_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: 100e-6
+    comment: ''
+    gate: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    ramp: '0'
+    threshold: trigger
+    type: complex
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [800, 268.0]
+    rotation: 0
+    state: enabled
+- name: analog_pwr_squelch_xx_0_1
+  id: analog_pwr_squelch_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: 1e-4
+    comment: ''
+    gate: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    ramp: '0'
+    threshold: trigger
+    type: complex
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [800, 444.0]
+    rotation: 0
+    state: enabled
+- name: analog_pwr_squelch_xx_0_2
+  id: analog_pwr_squelch_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: 1e-4
+    comment: ''
+    gate: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    ramp: '0'
+    threshold: trigger
+    type: complex
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [800, 532.0]
+    rotation: 0
+    state: enabled
+- name: analog_pwr_squelch_xx_0_2_0
+  id: analog_pwr_squelch_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: 100e-6
+    comment: ''
+    gate: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    ramp: '0'
+    threshold: trigger
+    type: complex
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [800, 620.0]
+    rotation: 0
+    state: enabled
+- name: blocks_complex_to_arg_0
+  id: blocks_complex_to_arg
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [840, 1624.0]
+    rotation: 0
+    state: true
+- name: blocks_complex_to_arg_0_0
+  id: blocks_complex_to_arg
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [832, 1328.0]
+    rotation: 0
+    state: true
+- name: blocks_complex_to_arg_0_1
+  id: blocks_complex_to_arg
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [824, 1040.0]
+    rotation: 0
+    state: true
+- name: blocks_complex_to_arg_0_2
+  id: blocks_complex_to_arg
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [840, 1920.0]
+    rotation: 0
+    state: true
+- name: blocks_complex_to_arg_0_3
+  id: blocks_complex_to_arg
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [832, 2232.0]
+    rotation: 0
+    state: true
+- name: blocks_complex_to_arg_1
+  id: blocks_complex_to_arg
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1512, 1624.0]
+    rotation: 0
+    state: true
+- name: blocks_complex_to_arg_1_0
+  id: blocks_complex_to_arg
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1504, 1328.0]
+    rotation: 0
+    state: true
+- name: blocks_complex_to_arg_1_1
+  id: blocks_complex_to_arg
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1496, 1040.0]
+    rotation: 0
+    state: true
+- name: blocks_complex_to_arg_1_2
+  id: blocks_complex_to_arg
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1512, 1920.0]
+    rotation: 0
+    state: true
+- name: blocks_complex_to_arg_1_3
+  id: blocks_complex_to_arg
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1504, 2232.0]
+    rotation: 0
+    state: true
+- name: blocks_correctiq_0
+  id: blocks_correctiq
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [168, 272.0]
+    rotation: 0
+    state: true
+- name: blocks_delay_0
+  id: blocks_delay
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    delay: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [952, 1768.0]
+    rotation: 0
+    state: true
+- name: blocks_delay_0_0
+  id: blocks_delay
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    delay: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [944, 1472.0]
+    rotation: 0
+    state: true
+- name: blocks_delay_0_1
+  id: blocks_delay
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    delay: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [936, 1184.0]
+    rotation: 0
+    state: true
+- name: blocks_delay_0_2
+  id: blocks_delay
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    delay: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [952, 2064.0]
+    rotation: 0
+    state: true
+- name: blocks_delay_0_3
+  id: blocks_delay
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    delay: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [944, 2376.0]
+    rotation: 0
+    state: true
+- name: blocks_file_sink_0_0
+  id: blocks_file_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    comment: ''
+    file: /home/edwin/channel2.bin
+    type: byte
+    unbuffered: 'False'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1920, 348.0]
+    rotation: 0
+    state: true
+- name: blocks_file_sink_0_0_0
+  id: blocks_file_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    comment: ''
+    file: /home/edwin/channel1.bin
+    type: byte
+    unbuffered: 'False'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1920, 228.0]
+    rotation: 0
+    state: true
+- name: blocks_file_sink_0_1
+  id: blocks_file_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    comment: ''
+    file: /home/edwin/channel3.bin
+    type: byte
+    unbuffered: 'False'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1928, 468.0]
+    rotation: 0
+    state: true
+- name: blocks_file_sink_0_2
+  id: blocks_file_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    comment: ''
+    file: /home/edwin/channel4.bin
+    type: byte
+    unbuffered: 'False'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1928, 588.0]
+    rotation: 0
+    state: true
+- name: blocks_file_sink_0_3
+  id: blocks_file_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    comment: ''
+    file: /home/edwin/channel5.bin
+    type: byte
+    unbuffered: 'False'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1928, 708.0]
+    rotation: 0
+    state: true
+- name: blocks_head_0
+  id: blocks_head
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_items: '120000000'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [280, 364.0]
+    rotation: 0
+    state: disabled
+- name: blocks_magphase_to_complex_0
+  id: blocks_magphase_to_complex
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1216, 1608.0]
+    rotation: 0
+    state: true
+- name: blocks_magphase_to_complex_0_0
+  id: blocks_magphase_to_complex
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1208, 1312.0]
+    rotation: 0
+    state: true
+- name: blocks_magphase_to_complex_0_1
+  id: blocks_magphase_to_complex
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1200, 1024.0]
+    rotation: 0
+    state: true
+- name: blocks_magphase_to_complex_0_2
+  id: blocks_magphase_to_complex
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1216, 1904.0]
+    rotation: 0
+    state: true
+- name: blocks_magphase_to_complex_0_3
+  id: blocks_magphase_to_complex
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1208, 2216.0]
+    rotation: 0
+    state: true
+- name: blocks_null_sink_0
+  id: blocks_null_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    bus_structure_sink: '[[0,],]'
+    comment: ''
+    num_inputs: '1'
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [704, 416.0]
+    rotation: 0
+    state: true
+- name: blocks_repack_bits_bb_0
+  id: blocks_repack_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    align_output: 'False'
+    comment: ''
+    endianness: gr.GR_LSB_FIRST
+    k: '1'
+    l: '8'
+    len_tag_key: '""'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1688, 716.0]
+    rotation: 0
+    state: true
+- name: blocks_repack_bits_bb_0_0
+  id: blocks_repack_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    align_output: 'False'
+    comment: ''
+    endianness: gr.GR_LSB_FIRST
+    k: '1'
+    l: '8'
+    len_tag_key: '""'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1696, 236.0]
+    rotation: 0
+    state: true
+- name: blocks_repack_bits_bb_0_1
+  id: blocks_repack_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    align_output: 'False'
+    comment: ''
+    endianness: gr.GR_LSB_FIRST
+    k: '1'
+    l: '8'
+    len_tag_key: '""'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1696, 356.0]
+    rotation: 0
+    state: true
+- name: blocks_repack_bits_bb_0_2
+  id: blocks_repack_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    align_output: 'False'
+    comment: ''
+    endianness: gr.GR_LSB_FIRST
+    k: '1'
+    l: '8'
+    len_tag_key: '""'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1688, 596.0]
+    rotation: 0
+    state: true
+- name: blocks_repack_bits_bb_0_3
+  id: blocks_repack_bits_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    align_output: 'False'
+    comment: ''
+    endianness: gr.GR_LSB_FIRST
+    k: '1'
+    l: '8'
+    len_tag_key: '""'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1696, 476.0]
+    rotation: 0
+    state: true
+- name: blocks_sub_xx_0
+  id: blocks_sub_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1056, 1624.0]
+    rotation: 0
+    state: true
+- name: blocks_sub_xx_0_0
+  id: blocks_sub_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1048, 1328.0]
+    rotation: 0
+    state: true
+- name: blocks_sub_xx_0_1
+  id: blocks_sub_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1040, 1040.0]
+    rotation: 0
+    state: true
+- name: blocks_sub_xx_0_2
+  id: blocks_sub_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1056, 1920.0]
+    rotation: 0
+    state: true
+- name: blocks_sub_xx_0_3
+  id: blocks_sub_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_inputs: '2'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1048, 2232.0]
+    rotation: 0
+    state: true
+- name: digital_gfsk_demod_0
+  id: digital_gfsk_demod
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    freq_error: '0.01'
+    gain_mu: '0.175'
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mu: '0.320'
+    omega_relative_limit: '0.005'
+    samples_per_symbol: '4'
+    sensitivity: '2.546479'
+    verbose: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1408, 204.0]
+    rotation: 0
+    state: true
+- name: digital_gfsk_demod_0_0
+  id: digital_gfsk_demod
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    freq_error: '0.01'
+    gain_mu: '0.175'
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mu: '0.320'
+    omega_relative_limit: '0.005'
+    samples_per_symbol: '4'
+    sensitivity: '2.546479'
+    verbose: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1408, 324.0]
+    rotation: 0
+    state: true
+- name: digital_gfsk_demod_0_1
+  id: digital_gfsk_demod
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    freq_error: '0.01'
+    gain_mu: '0.175'
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mu: '0.320'
+    omega_relative_limit: '0.005'
+    samples_per_symbol: '4'
+    sensitivity: '2.546479'
+    verbose: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1408, 444.0]
+    rotation: 0
+    state: enabled
+- name: digital_gfsk_demod_0_2
+  id: digital_gfsk_demod
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    freq_error: '0.01'
+    gain_mu: '0.175'
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mu: '0.320'
+    omega_relative_limit: '0.005'
+    samples_per_symbol: '4'
+    sensitivity: '2.546479'
+    verbose: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1408, 564.0]
+    rotation: 0
+    state: true
+- name: digital_gfsk_demod_0_2_0
+  id: digital_gfsk_demod
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    freq_error: '0.01'
+    gain_mu: '0.175'
+    log: 'False'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mu: '0.320'
+    omega_relative_limit: '0.005'
+    samples_per_symbol: '4'
+    sensitivity: '2.546479'
+    verbose: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1408, 684.0]
+    rotation: 0
+    state: true
+- name: epy_block_1_0
+  id: epy_block
+  parameters:
+    _source_code: "import csv\nimport numpy as np \nimport pmt\nfrom gnuradio import\
+      \ gr\n\nclass selective_save(gr.sync_block):\n    def __init__(self, filepath='output.csv',\
+      \ sampling_rate=1e6, median_symbols=100):\n        gr.sync_block.__init__(\n\
+      \            self,\n            name=\"Selective Save\",\n            in_sig=[np.float32],\n\
+      \            out_sig=None\n        )\n        self.filepath = filepath\n   \
+      \     self.sampling_rate = sampling_rate\n        self.duration_samples = int((200e-6)\
+      \ * self.sampling_rate)  # 100 us worth of samples\n        self.median_symbols\
+      \ = median_symbols\n        self.squelch_active = False\n        self.sample_count\
+      \ = 0\n        self.positive_phases = []\n        self.negative_phases = []\n\
+      \        self.data_points = []\n        self.csvfile = open(self.filepath, 'w',\
+      \ newline='')\n        self.csvwriter = csv.writer(self.csvfile, delimiter=',')\n\
+      \        self.index = 1\n\n    def work(self, input_items, output_items):\n\
+      \        in0 = input_items[0]\n        ninput_items = len(in0)\n        tags\
+      \ = self.get_tags_in_window(0, 0, ninput_items)\n\n        # Check for squelch_sob\
+      \ tag to activate recording\n        for tag in tags:\n            key = pmt.symbol_to_string(tag.key)\n\
+      \            if key == 'squelch_sob':\n                self.squelch_active =\
+      \ True\n                self.sample_count = 0\n\n        # If squelch is active\
+      \ and we haven't reached the desired duration, record data\n        if self.squelch_active:\n\
+      \            end_idx = min(ninput_items, self.sample_count + self.duration_samples)\n\
+      \            for idx in range(self.sample_count, end_idx):\n               \
+      \ value = in0[idx]\n                # Only save values within -0.5 to 0.5\n\
+      \                if -0.15 <= value <= 0.15:\n                    if value >\
+      \ 0:\n                        self.positive_phases.append(value)\n         \
+      \           elif value < 0:\n                        self.negative_phases.append(value)\n\
+      \            self.sample_count += ninput_items\n\n            # Stop recording\
+      \ if we've reached the duration limit\n            if self.sample_count >= self.duration_samples:\n\
+      \                self.squelch_active = False\n\n        # Proceed with calculations\
+      \ if enough data points are collected\n        if len(self.positive_phases)\
+      \ > self.median_symbols and len(self.negative_phases) > self.median_symbols:\n\
+      \            pos_quantile = np.median(self.positive_phases)\n            neg_quantile\
+      \ = np.median(self.negative_phases)\n            cfo = (pos_quantile + neg_quantile)\
+      \ / 2\n            deviation = (pos_quantile - cfo)\n\n            # Write calculations\
+      \ to CSV\n            self.csvwriter.writerow([cfo, deviation])\n          \
+      \  \n            # Reset the lists\n            self.positive_phases = []\n\
+      \            self.negative_phases = []\n\n        return ninput_items\n\n  \
+      \  def stop(self):\n        self.csvfile.close()\n        return True\n\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    filepath: '"/home/edwin/Downloads/channel3_CFO_DEV.csv"'
+    maxoutbuf: '0'
+    median_symbols: '200'
+    minoutbuf: '0'
+    sampling_rate: 4e6
+  states:
+    _io_cache: ('Selective Save', 'selective_save', [('filepath', "'output.csv'"),
+      ('sampling_rate', '1000000.0'), ('median_symbols', '100')], [('0', 'float',
+      1)], [], '', ['filepath', 'median_symbols', 'sampling_rate'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1688, 1604.0]
+    rotation: 0
+    state: enabled
+- name: epy_block_1_0_0
+  id: epy_block
+  parameters:
+    _source_code: "import csv\nimport numpy as np \nimport pmt\nfrom gnuradio import\
+      \ gr\n\nclass selective_save(gr.sync_block):\n    def __init__(self, filepath='output.csv',\
+      \ sampling_rate=1e6, median_symbols=100):\n        gr.sync_block.__init__(\n\
+      \            self,\n            name=\"Selective Save\",\n            in_sig=[np.float32],\n\
+      \            out_sig=None\n        )\n        self.filepath = filepath\n   \
+      \     self.sampling_rate = sampling_rate\n        self.duration_samples = int((200e-6)\
+      \ * self.sampling_rate)  # 100 us worth of samples\n        self.median_symbols\
+      \ = median_symbols\n        self.squelch_active = False\n        self.sample_count\
+      \ = 0\n        self.positive_phases = []\n        self.negative_phases = []\n\
+      \        self.data_points = []\n        self.csvfile = open(self.filepath, 'w',\
+      \ newline='')\n        self.csvwriter = csv.writer(self.csvfile, delimiter=',')\n\
+      \        self.index = 1\n\n    def work(self, input_items, output_items):\n\
+      \        in0 = input_items[0]\n        ninput_items = len(in0)\n        tags\
+      \ = self.get_tags_in_window(0, 0, ninput_items)\n\n        # Check for squelch_sob\
+      \ tag to activate recording\n        for tag in tags:\n            key = pmt.symbol_to_string(tag.key)\n\
+      \            if key == 'squelch_sob':\n                self.squelch_active =\
+      \ True\n                self.sample_count = 0\n\n        # If squelch is active\
+      \ and we haven't reached the desired duration, record data\n        if self.squelch_active:\n\
+      \            end_idx = min(ninput_items, self.sample_count + self.duration_samples)\n\
+      \            for idx in range(self.sample_count, end_idx):\n               \
+      \ value = in0[idx]\n                # Only save values within -0.5 to 0.5\n\
+      \                if -0.15 <= value <= 0.15:\n                    if value >\
+      \ 0:\n                        self.positive_phases.append(value)\n         \
+      \           elif value < 0:\n                        self.negative_phases.append(value)\n\
+      \            self.sample_count += ninput_items\n\n            # Stop recording\
+      \ if we've reached the duration limit\n            if self.sample_count >= self.duration_samples:\n\
+      \                self.squelch_active = False\n\n        # Proceed with calculations\
+      \ if enough data points are collected\n        if len(self.positive_phases)\
+      \ > self.median_symbols and len(self.negative_phases) > self.median_symbols:\n\
+      \            pos_quantile = np.median(self.positive_phases)\n            neg_quantile\
+      \ = np.median(self.negative_phases)\n            cfo = (pos_quantile + neg_quantile)\
+      \ / 2\n            deviation = (pos_quantile - cfo)\n\n            # Write calculations\
+      \ to CSV\n            self.csvwriter.writerow([cfo, deviation])\n          \
+      \  \n            # Reset the lists\n            self.positive_phases = []\n\
+      \            self.negative_phases = []\n\n        return ninput_items\n\n  \
+      \  def stop(self):\n        self.csvfile.close()\n        return True\n\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    filepath: '"/home/edwin/Downloads/channel2_CFO_DEV.csv"'
+    maxoutbuf: '0'
+    median_symbols: '200'
+    minoutbuf: '0'
+    sampling_rate: 4e6
+  states:
+    _io_cache: ('Selective Save', 'selective_save', [('filepath', "'output.csv'"),
+      ('sampling_rate', '1000000.0'), ('median_symbols', '100')], [('0', 'float',
+      1)], [], '', ['filepath', 'median_symbols', 'sampling_rate'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1680, 1308.0]
+    rotation: 0
+    state: enabled
+- name: epy_block_1_0_1
+  id: epy_block
+  parameters:
+    _source_code: "import csv\nimport numpy as np \nimport pmt\nfrom gnuradio import\
+      \ gr\n\nclass selective_save(gr.sync_block):\n    def __init__(self, filepath='output.csv',\
+      \ sampling_rate=1e6, median_symbols=100):\n        gr.sync_block.__init__(\n\
+      \            self,\n            name=\"Selective Save\",\n            in_sig=[np.float32],\n\
+      \            out_sig=None\n        )\n        self.filepath = filepath\n   \
+      \     self.sampling_rate = sampling_rate\n        self.duration_samples = int((200e-6)\
+      \ * self.sampling_rate)  # 100 us worth of samples\n        self.median_symbols\
+      \ = median_symbols\n        self.squelch_active = False\n        self.sample_count\
+      \ = 0\n        self.positive_phases = []\n        self.negative_phases = []\n\
+      \        self.data_points = []\n        self.csvfile = open(self.filepath, 'w',\
+      \ newline='')\n        self.csvwriter = csv.writer(self.csvfile, delimiter=',')\n\
+      \        self.index = 1\n\n    def work(self, input_items, output_items):\n\
+      \        in0 = input_items[0]\n        ninput_items = len(in0)\n        tags\
+      \ = self.get_tags_in_window(0, 0, ninput_items)\n\n        # Check for squelch_sob\
+      \ tag to activate recording\n        for tag in tags:\n            key = pmt.symbol_to_string(tag.key)\n\
+      \            if key == 'squelch_sob':\n                self.squelch_active =\
+      \ True\n                self.sample_count = 0\n\n        # If squelch is active\
+      \ and we haven't reached the desired duration, record data\n        if self.squelch_active:\n\
+      \            end_idx = min(ninput_items, self.sample_count + self.duration_samples)\n\
+      \            for idx in range(self.sample_count, end_idx):\n               \
+      \ value = in0[idx]\n                # Only save values within -0.5 to 0.5\n\
+      \                if -0.15 <= value <= 0.15:\n                    if value >\
+      \ 0:\n                        self.positive_phases.append(value)\n         \
+      \           elif value < 0:\n                        self.negative_phases.append(value)\n\
+      \            self.sample_count += ninput_items\n\n            # Stop recording\
+      \ if we've reached the duration limit\n            if self.sample_count >= self.duration_samples:\n\
+      \                self.squelch_active = False\n\n        # Proceed with calculations\
+      \ if enough data points are collected\n        if len(self.positive_phases)\
+      \ > self.median_symbols and len(self.negative_phases) > self.median_symbols:\n\
+      \            pos_quantile = np.median(self.positive_phases)\n            neg_quantile\
+      \ = np.median(self.negative_phases)\n            cfo = (pos_quantile + neg_quantile)\
+      \ / 2\n            deviation = (pos_quantile - cfo)\n\n            # Write calculations\
+      \ to CSV\n            self.csvwriter.writerow([cfo, deviation])\n          \
+      \  \n            # Reset the lists\n            self.positive_phases = []\n\
+      \            self.negative_phases = []\n\n        return ninput_items\n\n  \
+      \  def stop(self):\n        self.csvfile.close()\n        return True\n\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    filepath: '"/home/edwin/Downloads/channel1_CFO_DEV.csv"'
+    maxoutbuf: '0'
+    median_symbols: '200'
+    minoutbuf: '0'
+    sampling_rate: 4e6
+  states:
+    _io_cache: ('Selective Save', 'selective_save', [('filepath', "'output.csv'"),
+      ('sampling_rate', '1000000.0'), ('median_symbols', '100')], [('0', 'float',
+      1)], [], '', ['filepath', 'median_symbols', 'sampling_rate'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1672, 1020.0]
+    rotation: 0
+    state: enabled
+- name: epy_block_1_0_2
+  id: epy_block
+  parameters:
+    _source_code: "import csv\nimport numpy as np \nimport pmt\nfrom gnuradio import\
+      \ gr\n\nclass selective_save(gr.sync_block):\n    def __init__(self, filepath='output.csv',\
+      \ sampling_rate=1e6, median_symbols=100):\n        gr.sync_block.__init__(\n\
+      \            self,\n            name=\"Selective Save\",\n            in_sig=[np.float32],\n\
+      \            out_sig=None\n        )\n        self.filepath = filepath\n   \
+      \     self.sampling_rate = sampling_rate\n        self.duration_samples = int((200e-6)\
+      \ * self.sampling_rate)  # 100 us worth of samples\n        self.median_symbols\
+      \ = median_symbols\n        self.squelch_active = False\n        self.sample_count\
+      \ = 0\n        self.positive_phases = []\n        self.negative_phases = []\n\
+      \        self.data_points = []\n        self.csvfile = open(self.filepath, 'w',\
+      \ newline='')\n        self.csvwriter = csv.writer(self.csvfile, delimiter=',')\n\
+      \        self.index = 1\n\n    def work(self, input_items, output_items):\n\
+      \        in0 = input_items[0]\n        ninput_items = len(in0)\n        tags\
+      \ = self.get_tags_in_window(0, 0, ninput_items)\n\n        # Check for squelch_sob\
+      \ tag to activate recording\n        for tag in tags:\n            key = pmt.symbol_to_string(tag.key)\n\
+      \            if key == 'squelch_sob':\n                self.squelch_active =\
+      \ True\n                self.sample_count = 0\n\n        # If squelch is active\
+      \ and we haven't reached the desired duration, record data\n        if self.squelch_active:\n\
+      \            end_idx = min(ninput_items, self.sample_count + self.duration_samples)\n\
+      \            for idx in range(self.sample_count, end_idx):\n               \
+      \ value = in0[idx]\n                # Only save values within -0.5 to 0.5\n\
+      \                if -0.15 <= value <= 0.15:\n                    if value >\
+      \ 0:\n                        self.positive_phases.append(value)\n         \
+      \           elif value < 0:\n                        self.negative_phases.append(value)\n\
+      \            self.sample_count += ninput_items\n\n            # Stop recording\
+      \ if we've reached the duration limit\n            if self.sample_count >= self.duration_samples:\n\
+      \                self.squelch_active = False\n\n        # Proceed with calculations\
+      \ if enough data points are collected\n        if len(self.positive_phases)\
+      \ > self.median_symbols and len(self.negative_phases) > self.median_symbols:\n\
+      \            pos_quantile = np.median(self.positive_phases)\n            neg_quantile\
+      \ = np.median(self.negative_phases)\n            cfo = (pos_quantile + neg_quantile)\
+      \ / 2\n            deviation = (pos_quantile - cfo)\n\n            # Write calculations\
+      \ to CSV\n            self.csvwriter.writerow([cfo, deviation])\n          \
+      \  \n            # Reset the lists\n            self.positive_phases = []\n\
+      \            self.negative_phases = []\n\n        return ninput_items\n\n  \
+      \  def stop(self):\n        self.csvfile.close()\n        return True\n\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    filepath: '"/home/edwin/Downloads/channel4_CFO_DEV.csv"'
+    maxoutbuf: '0'
+    median_symbols: '200'
+    minoutbuf: '0'
+    sampling_rate: 4e6
+  states:
+    _io_cache: ('Selective Save', 'selective_save', [('filepath', "'output.csv'"),
+      ('sampling_rate', '1000000.0'), ('median_symbols', '100')], [('0', 'float',
+      1)], [], '', ['filepath', 'median_symbols', 'sampling_rate'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1688, 1900.0]
+    rotation: 0
+    state: enabled
+- name: epy_block_1_0_3
+  id: epy_block
+  parameters:
+    _source_code: "import csv\nimport numpy as np \nimport pmt\nfrom gnuradio import\
+      \ gr\n\nclass selective_save(gr.sync_block):\n    def __init__(self, filepath='output.csv',\
+      \ sampling_rate=1e6, median_symbols=100):\n        gr.sync_block.__init__(\n\
+      \            self,\n            name=\"Selective Save\",\n            in_sig=[np.float32],\n\
+      \            out_sig=None\n        )\n        self.filepath = filepath\n   \
+      \     self.sampling_rate = sampling_rate\n        self.duration_samples = int((200e-6)\
+      \ * self.sampling_rate)  # 100 us worth of samples\n        self.median_symbols\
+      \ = median_symbols\n        self.squelch_active = False\n        self.sample_count\
+      \ = 0\n        self.positive_phases = []\n        self.negative_phases = []\n\
+      \        self.data_points = []\n        self.csvfile = open(self.filepath, 'w',\
+      \ newline='')\n        self.csvwriter = csv.writer(self.csvfile, delimiter=',')\n\
+      \        self.index = 1\n\n    def work(self, input_items, output_items):\n\
+      \        in0 = input_items[0]\n        ninput_items = len(in0)\n        tags\
+      \ = self.get_tags_in_window(0, 0, ninput_items)\n\n        # Check for squelch_sob\
+      \ tag to activate recording\n        for tag in tags:\n            key = pmt.symbol_to_string(tag.key)\n\
+      \            if key == 'squelch_sob':\n                self.squelch_active =\
+      \ True\n                self.sample_count = 0\n\n        # If squelch is active\
+      \ and we haven't reached the desired duration, record data\n        if self.squelch_active:\n\
+      \            end_idx = min(ninput_items, self.sample_count + self.duration_samples)\n\
+      \            for idx in range(self.sample_count, end_idx):\n               \
+      \ value = in0[idx]\n                # Only save values within -0.5 to 0.5\n\
+      \                if -0.15 <= value <= 0.15:\n                    if value >\
+      \ 0:\n                        self.positive_phases.append(value)\n         \
+      \           elif value < 0:\n                        self.negative_phases.append(value)\n\
+      \            self.sample_count += ninput_items\n\n            # Stop recording\
+      \ if we've reached the duration limit\n            if self.sample_count >= self.duration_samples:\n\
+      \                self.squelch_active = False\n\n        # Proceed with calculations\
+      \ if enough data points are collected\n        if len(self.positive_phases)\
+      \ > self.median_symbols and len(self.negative_phases) > self.median_symbols:\n\
+      \            pos_quantile = np.median(self.positive_phases)\n            neg_quantile\
+      \ = np.median(self.negative_phases)\n            cfo = (pos_quantile + neg_quantile)\
+      \ / 2\n            deviation = (pos_quantile - cfo)\n\n            # Write calculations\
+      \ to CSV\n            self.csvwriter.writerow([cfo, deviation])\n          \
+      \  \n            # Reset the lists\n            self.positive_phases = []\n\
+      \            self.negative_phases = []\n\n        return ninput_items\n\n  \
+      \  def stop(self):\n        self.csvfile.close()\n        return True\n\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    filepath: '"/home/edwin/Downloads/channel5_CFO_DEV.csv"'
+    maxoutbuf: '0'
+    median_symbols: '200'
+    minoutbuf: '0'
+    sampling_rate: 4e6
+  states:
+    _io_cache: ('Selective Save', 'selective_save', [('filepath', "'output.csv'"),
+      ('sampling_rate', '1000000.0'), ('median_symbols', '100')], [('0', 'float',
+      1)], [], '', ['filepath', 'median_symbols', 'sampling_rate'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1680, 2212.0]
+    rotation: 0
+    state: enabled
+- name: epy_block_4
+  id: epy_block
+  parameters:
+    _source_code: "import numpy as np\nfrom gnuradio import gr\nimport pmt\n\nclass\
+      \ my_basic_adder_block(gr.basic_block):\n    def __init__(self,tag_name = 'packet_len'):\n\
+      \        gr.basic_block.__init__(self,\n                                name=\"\
+      Tagged Stream Cropper\",\n                                in_sig  = [np.complex64],\n\
+      \                                out_sig = [np.complex64])\n\n        self.previous_tag_n_remainder\
+      \ = 0\n        self.tag_name = tag_name\n        self.set_tag_propagation_policy(gr.TPP_DONT)\n\
+      \n\n    def general_work(self, input_items, output_items):\n        len_out\
+      \ = len(output_items[0])\n\n        # DO PROCESSING\n        out_produced =\
+      \ 0 # output produced \n\n        #-> Write the remaining data of the previous\
+      \ tag\n        if self.previous_tag_n_remainder > 0: \n            if self.previous_tag_n_remainder\
+      \ < len_out: # if the length of the input items is sufficient to write the remainder\
+      \ of the previous tag items \n                output_items[0][:self.previous_tag_n_remainder]\
+      \ = input_items[0][:self.previous_tag_n_remainder] #write to output \n     \
+      \           out_produced                                   += self.previous_tag_n_remainder\
+      \                  #inccrease the number of item produced\n                self.previous_tag_n_remainder\
+      \ = 0                                                                #reset\
+      \ the counter \n                # the RETURN is at the end of the work()\n\n\
+      \            else: # self.previous_tag_n_remainder >= len_out\n            \
+      \    output_items[0][:len_out]      = input_items[0][:len_out]\n           \
+      \     self.previous_tag_n_remainder -= len_out\n                self.consume(0,\
+      \ len_out)\n                return len_out\n\n        # READ TAGS AND PARSE\
+      \ THE RECEIVED STREAM\n        tags = self.get_tags_in_window(0, out_produced,\
+      \ len_out)\n\n        #if there exist tag\n        if len(tags) > 0:\n     \
+      \       #for each tag apply\n            for tag in tags:\n                tag_name\
+      \ = pmt.to_python(tag.key)            # packet_tag\n                tag_len\
+      \ = pmt.to_python(tag.value)          # packet_len\n                tag_pos\
+      \ = tag.offset - self.nitems_read(0)  # packet_position_index\n            \
+      \    if tag_name == self.tag_name:       #check if the tag name is appropriate\n\
+      \                    if tag_pos + tag_len < len_out: # if all the elements correspding\
+      \ to the \"tag\" are included in the input_items\n\n                       \
+      \ # write the elements to the output\n                        output_items[0][out_produced:(out_produced+tag_len)]\
+      \ = input_items[0][tag_pos:(tag_pos+tag_len)]\n\n                        # add\
+      \ tag to the corresponding start point                     \n              \
+      \          self.add_item_tag(0,                                   # Write to\
+      \ output port 0\n                                         self.nitems_written(0)+out_produced,\
+      \  # Index of the tag in absolute terms\n                                  \
+      \       tag.key,                              # Key of the tag\n           \
+      \                              tag.value                             # Value\
+      \ of the tag\n                                         )\n                 \
+      \       #increase the number of output element produced counter\n          \
+      \              out_produced += tag_len\n\n                    else: #tag_pos+tag_len\
+      \ >= len_out:\n                        n_item_to_wrt = len_out - tag_pos\n \
+      \                       output_items[0][out_produced:(out_produced + n_item_to_wrt)]\
+      \ = input_items[0][tag_pos:(tag_pos+n_item_to_wrt)]\n\n                    \
+      \    self.add_item_tag(0,                                     # Write to output\
+      \ port 0\n                                          self.nitems_written(0)+out_produced,\
+      \   # Index of the tag in absolute terms\n                                 \
+      \         tag.key,                               # Key of the tag\n        \
+      \                                  tag.value                              #\
+      \ Value of the tag\n                                          )\n\n        \
+      \                self.previous_tag_n_remainder = tag_len - n_item_to_wrt\n \
+      \                       out_produced                 += n_item_to_wrt\n    \
+      \                    self.consume(0,len_out)\n                        return\
+      \ out_produced\n\n        #if there is no tag exits\n        self.consume(0,len_out)\n\
+      \n        #recall that the first \"if\" state is producing element!\n      \
+      \  return out_produced\n"
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    tag_name: '''packet_len'''
+  states:
+    _io_cache: ('Tagged Stream Cropper', 'my_basic_adder_block', [('tag_name', "'packet_len'")],
+      [('0', 'complex', 1)], [('0', 'complex', 1)], '', ['tag_name'])
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [472, 804.0]
+    rotation: 0
+    state: disabled
+- name: freq_xlating_fir_filter_xxx_0
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: '0'
+    comment: ''
+    decim: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: 4e6
+    taps: firdes.complex_band_pass(1, 4e6, -0.5e6, 0.5e6, 50e3, window.WIN_HAMMING)
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1072, 284.0]
+    rotation: 0
+    state: enabled
+- name: freq_xlating_fir_filter_xxx_1
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: '0'
+    comment: ''
+    decim: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: 4e6
+    taps: firdes.complex_band_pass(1, 4e6, -0.5e6, 0.5e6, 50e3, window.WIN_HAMMING)
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1072, 372.0]
+    rotation: 0
+    state: enabled
+- name: freq_xlating_fir_filter_xxx_2
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: '0'
+    comment: ''
+    decim: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: 4e6
+    taps: firdes.complex_band_pass(1, 4e6, -0.5e6, 0.5e6, 50e3, window.WIN_HAMMING)
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1072, 460.0]
+    rotation: 0
+    state: enabled
+- name: freq_xlating_fir_filter_xxx_3
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: '0'
+    comment: ''
+    decim: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: 4e6
+    taps: firdes.complex_band_pass(1, 4e6, -0.5e6, 0.5e6, 50e3, window.WIN_HAMMING)
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1072, 548.0]
+    rotation: 0
+    state: enabled
+- name: freq_xlating_fir_filter_xxx_3_0
+  id: freq_xlating_fir_filter_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    center_freq: '0'
+    comment: ''
+    decim: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: 4e6
+    taps: firdes.complex_band_pass(1, 4e6, -0.5e6, 0.5e6, 50e3, window.WIN_HAMMING)
+    type: ccc
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1072, 636.0]
+    rotation: 0
+    state: enabled
+- name: pfb_channelizer_ccf_1
+  id: pfb_channelizer_ccf
+  parameters:
+    affinity: ''
+    alias: ''
+    atten: '100'
+    bus_structure_source: '[[0,],]'
+    ch_map: '[]'
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    nchans: '6'
+    osr: '2.0'
+    samp_delay: '0'
+    taps: firdes.low_pass(1, 12e6, 100e3, 500e3, window.WIN_HANN)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [472, 280.0]
+    rotation: 0
+    state: true
+- name: qtgui_const_sink_x_0
+  id: qtgui_const_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    axislabels: 'True'
+    color1: '"blue"'
+    color10: '"red"'
+    color2: '"red"'
+    color3: '"red"'
+    color4: '"red"'
+    color5: '"red"'
+    color6: '"red"'
+    color7: '"red"'
+    color8: '"red"'
+    color9: '"red"'
+    comment: ''
+    grid: 'False'
+    gui_hint: ''
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    marker1: '0'
+    marker10: '0'
+    marker2: '0'
+    marker3: '0'
+    marker4: '0'
+    marker5: '0'
+    marker6: '0'
+    marker7: '0'
+    marker8: '0'
+    marker9: '0'
+    name: '""'
+    nconnections: '1'
+    size: '1024'
+    style1: '0'
+    style10: '0'
+    style2: '0'
+    style3: '0'
+    style4: '0'
+    style5: '0'
+    style6: '0'
+    style7: '0'
+    style8: '0'
+    style9: '0'
+    tr_chan: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: complex
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    xmax: '2'
+    xmin: '-2'
+    ymax: '2'
+    ymin: '-2'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1032, 820.0]
+    rotation: 0
+    state: true
+- name: qtgui_freq_sink_x_0_0_0
+  id: qtgui_freq_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    average: '1.0'
+    axislabels: 'True'
+    bw: 1e6
+    color1: '"blue"'
+    color10: '"dark blue"'
+    color2: '"red"'
+    color3: '"green"'
+    color4: '"black"'
+    color5: '"cyan"'
+    color6: '"magenta"'
+    color7: '"yellow"'
+    color8: '"dark red"'
+    color9: '"dark green"'
+    comment: ''
+    ctrlpanel: 'False'
+    fc: '0'
+    fftsize: '1024'
+    freqhalf: 'True'
+    grid: 'True'
+    gui_hint: ''
+    label: Relative Gain
+    label1: ''
+    label10: ''''''
+    label2: ''''''
+    label3: ''''''
+    label4: ''''''
+    label5: ''''''
+    label6: ''''''
+    label7: ''''''
+    label8: ''''''
+    label9: ''''''
+    legend: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '"cannel4"'
+    nconnections: '1'
+    norm_window: 'False'
+    showports: 'False'
+    tr_chan: '0'
+    tr_level: trigger
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_tag: '""'
+    type: complex
+    units: dB
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    wintype: window.WIN_HANN
+    ymax: '10'
+    ymin: '-140'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1384, 828.0]
+    rotation: 0
+    state: disabled
+- name: soapy_hackrf_source_0
+  id: soapy_hackrf_source
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: 'True'
+    bandwidth: 6e6
+    center_freq: 2432e6
+    comment: ''
+    dev_args: ''
+    gain: gain
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: 12e6
+    type: fc32
+    vga: gain
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [0, 340.0]
+    rotation: 0
+    state: true
+
+connections:
+- [analog_const_source_x_0, '0', blocks_magphase_to_complex_0, '0']
+- [analog_const_source_x_0_0, '0', blocks_magphase_to_complex_0_0, '0']
+- [analog_const_source_x_0_1, '0', blocks_magphase_to_complex_0_1, '0']
+- [analog_const_source_x_0_2, '0', blocks_magphase_to_complex_0_2, '0']
+- [analog_const_source_x_0_3, '0', blocks_magphase_to_complex_0_3, '0']
+- [analog_pwr_squelch_xx_0_0, '0', freq_xlating_fir_filter_xxx_1, '0']
+- [analog_pwr_squelch_xx_0_0_0, '0', freq_xlating_fir_filter_xxx_0, '0']
+- [analog_pwr_squelch_xx_0_1, '0', freq_xlating_fir_filter_xxx_2, '0']
+- [analog_pwr_squelch_xx_0_2, '0', freq_xlating_fir_filter_xxx_3, '0']
+- [analog_pwr_squelch_xx_0_2_0, '0', freq_xlating_fir_filter_xxx_3_0, '0']
+- [blocks_complex_to_arg_0, '0', blocks_delay_0, '0']
+- [blocks_complex_to_arg_0, '0', blocks_sub_xx_0, '0']
+- [blocks_complex_to_arg_0_0, '0', blocks_delay_0_0, '0']
+- [blocks_complex_to_arg_0_0, '0', blocks_sub_xx_0_0, '0']
+- [blocks_complex_to_arg_0_1, '0', blocks_delay_0_1, '0']
+- [blocks_complex_to_arg_0_1, '0', blocks_sub_xx_0_1, '0']
+- [blocks_complex_to_arg_0_2, '0', blocks_delay_0_2, '0']
+- [blocks_complex_to_arg_0_2, '0', blocks_sub_xx_0_2, '0']
+- [blocks_complex_to_arg_0_3, '0', blocks_delay_0_3, '0']
+- [blocks_complex_to_arg_0_3, '0', blocks_sub_xx_0_3, '0']
+- [blocks_complex_to_arg_1, '0', epy_block_1_0, '0']
+- [blocks_complex_to_arg_1_0, '0', epy_block_1_0_0, '0']
+- [blocks_complex_to_arg_1_1, '0', epy_block_1_0_1, '0']
+- [blocks_complex_to_arg_1_2, '0', epy_block_1_0_2, '0']
+- [blocks_complex_to_arg_1_3, '0', epy_block_1_0_3, '0']
+- [blocks_correctiq_0, '0', blocks_head_0, '0']
+- [blocks_correctiq_0, '0', pfb_channelizer_ccf_1, '0']
+- [blocks_delay_0, '0', blocks_sub_xx_0, '1']
+- [blocks_delay_0_0, '0', blocks_sub_xx_0_0, '1']
+- [blocks_delay_0_1, '0', blocks_sub_xx_0_1, '1']
+- [blocks_delay_0_2, '0', blocks_sub_xx_0_2, '1']
+- [blocks_delay_0_3, '0', blocks_sub_xx_0_3, '1']
+- [blocks_head_0, '0', pfb_channelizer_ccf_1, '0']
+- [blocks_magphase_to_complex_0, '0', blocks_complex_to_arg_1, '0']
+- [blocks_magphase_to_complex_0_0, '0', blocks_complex_to_arg_1_0, '0']
+- [blocks_magphase_to_complex_0_1, '0', blocks_complex_to_arg_1_1, '0']
+- [blocks_magphase_to_complex_0_2, '0', blocks_complex_to_arg_1_2, '0']
+- [blocks_magphase_to_complex_0_3, '0', blocks_complex_to_arg_1_3, '0']
+- [blocks_repack_bits_bb_0, '0', blocks_file_sink_0_3, '0']
+- [blocks_repack_bits_bb_0_0, '0', blocks_file_sink_0_0_0, '0']
+- [blocks_repack_bits_bb_0_1, '0', blocks_file_sink_0_0, '0']
+- [blocks_repack_bits_bb_0_2, '0', blocks_file_sink_0_2, '0']
+- [blocks_repack_bits_bb_0_3, '0', blocks_file_sink_0_1, '0']
+- [blocks_sub_xx_0, '0', blocks_magphase_to_complex_0, '1']
+- [blocks_sub_xx_0_0, '0', blocks_magphase_to_complex_0_0, '1']
+- [blocks_sub_xx_0_1, '0', blocks_magphase_to_complex_0_1, '1']
+- [blocks_sub_xx_0_2, '0', blocks_magphase_to_complex_0_2, '1']
+- [blocks_sub_xx_0_3, '0', blocks_magphase_to_complex_0_3, '1']
+- [digital_gfsk_demod_0, '0', blocks_repack_bits_bb_0_0, '0']
+- [digital_gfsk_demod_0_0, '0', blocks_repack_bits_bb_0_1, '0']
+- [digital_gfsk_demod_0_1, '0', blocks_repack_bits_bb_0_3, '0']
+- [digital_gfsk_demod_0_2, '0', blocks_repack_bits_bb_0_2, '0']
+- [digital_gfsk_demod_0_2_0, '0', blocks_repack_bits_bb_0, '0']
+- [freq_xlating_fir_filter_xxx_0, '0', blocks_complex_to_arg_0_1, '0']
+- [freq_xlating_fir_filter_xxx_0, '0', digital_gfsk_demod_0, '0']
+- [freq_xlating_fir_filter_xxx_1, '0', blocks_complex_to_arg_0_0, '0']
+- [freq_xlating_fir_filter_xxx_1, '0', digital_gfsk_demod_0_0, '0']
+- [freq_xlating_fir_filter_xxx_2, '0', blocks_complex_to_arg_0, '0']
+- [freq_xlating_fir_filter_xxx_2, '0', digital_gfsk_demod_0_1, '0']
+- [freq_xlating_fir_filter_xxx_3, '0', blocks_complex_to_arg_0_2, '0']
+- [freq_xlating_fir_filter_xxx_3, '0', digital_gfsk_demod_0_2, '0']
+- [freq_xlating_fir_filter_xxx_3, '0', qtgui_const_sink_x_0, '0']
+- [freq_xlating_fir_filter_xxx_3_0, '0', blocks_complex_to_arg_0_3, '0']
+- [freq_xlating_fir_filter_xxx_3_0, '0', digital_gfsk_demod_0_2_0, '0']
+- [freq_xlating_fir_filter_xxx_3_0, '0', qtgui_freq_sink_x_0_0_0, '0']
+- [pfb_channelizer_ccf_1, '0', analog_pwr_squelch_xx_0_0_0, '0']
+- [pfb_channelizer_ccf_1, '1', analog_pwr_squelch_xx_0_0, '0']
+- [pfb_channelizer_ccf_1, '2', analog_pwr_squelch_xx_0_1, '0']
+- [pfb_channelizer_ccf_1, '3', blocks_null_sink_0, '0']
+- [pfb_channelizer_ccf_1, '4', analog_pwr_squelch_xx_0_2, '0']
+- [pfb_channelizer_ccf_1, '5', analog_pwr_squelch_xx_0_2_0, '0']
+- [soapy_hackrf_source_0, '0', blocks_correctiq_0, '0']
+
+metadata:
+  file_format: 1
